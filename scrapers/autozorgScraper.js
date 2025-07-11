@@ -174,10 +174,10 @@ async function universalScrape(url) {
     return;
   }
 
-  fs.writeFileSync("./data/brothers.json", JSON.stringify(products, null, 2));
+  fs.writeFileSync("./data/autozorg.json", JSON.stringify(products, null, 2));
   console.log(`✅ Scraped ${products.length} products`);
 }
 
 // CLI Run
-const targetUrl = process.argv[2] || "https://brothers.care/shop/";
+const targetUrl = process.argv[2] || "https://www.autozorg.org/store";
 universalScrape(targetUrl);
