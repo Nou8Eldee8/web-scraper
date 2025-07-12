@@ -48,7 +48,6 @@ async function scrapeAllProducts(startUrl) {
 
     try {
       const products = await scrapeProductListPage(page, currentPage);
-      console.log(`🔗 Found ${products.length} products on this page.`);
       allProducts.push(...products);
     } catch (err) {
       console.warn(`⚠️ Failed to scrape page ${currentPage}: ${err.message}`);
@@ -80,4 +79,4 @@ async function scrapeAllProducts(startUrl) {
 }
 
 // Run the scraper
-scrapeAllProducts(`${BASE_URL}/shop/`);
+scrapeAllProducts(`${BASE_URL}/shop/category/car-care-323`);
