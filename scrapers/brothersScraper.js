@@ -138,11 +138,7 @@ async function scrapeWithAxios(baseUrl) {
           products.push({
             name,
             price,
-            originalPrice,
-            discountAmount,
-            discountPercentage,
             productLink: finalLink,
-            imageUrl: img?.startsWith("http") ? img : `https:${img}`,
           });
         }
       });
